@@ -1,5 +1,8 @@
 {
   "name": "Vaccines",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
   "type": "angular"
 }

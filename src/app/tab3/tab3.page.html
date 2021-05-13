@@ -14,4 +14,20 @@
   </ion-header>
 
   <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-button expand="block" (click)="getDataNativeHttp()">getDataNativeHttp</ion-button>
+  <ion-list>
+    <ion-item-divider>
+      <ion-list-header>Current vaccine data</ion-list-header>
+    </ion-item-divider>
+    <div *ngIf="dataResult">
+      <ion-item>
+        <ion-label ion-text-wrap>Available:</ion-label>
+        <ion-note slot="end" color="primary">{{ dataResult.AvailableVaccineTypes }}</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>Last refresh time:</ion-label>
+        <ion-note slot="end" color="primary">{{ dataResult.lastModTime }}</ion-note>
+      </ion-item>
+    </div>
+  </ion-list>
 </ion-content>
